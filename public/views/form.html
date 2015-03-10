@@ -1,0 +1,164 @@
+<div class="main">
+    <div ng-include src="'/views/navigation.html'"></div>
+    <!-- carousel -->
+    <div class="container">
+
+      <br>
+      <div id="myCarousel" class="carousel slide carousel-sync" data-ride="carousel" data-wrap="false" data-interval="false">
+        <!-- Indicators -->
+        <!--ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol-->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner"><!-- role="listbox"-->
+            <!------------------------------------------- Yhteystiedot ------------------------------>            
+            <div class="item active">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                     <h4 class="panel-title">Yhteystiedot</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form role="form" name='kartoitusForm'>
+                                        <div class="form-group">
+                                            <label for="name">Etunimi ja sukunimi</label><label style="color: #f00000; font-size: 14pt">
+                                                &nbsp;*
+                                            </label>
+                                            <input type="text" id="name" class="form-control" ng-model='kartoitus.nimi' required>
+                                            <label for="number" start="1970">Syntymävuotesi</label><label style="color: #f00000; font-size: 14pt">
+                                                &nbsp;*
+                                            </label>
+                                            <input type="number" id="year" class="form-control" ng-model='kartoitus.vuosi' required>
+                                            <label for="email">Sähköpostiosoite</label><label style="color: #f00000; font-size: 14pt">
+                                                &nbsp;*
+                                            </label>
+                                            <input type="email" id="email" class="form-control" ng-model='kartoitus.email' required>
+                                            <label for="phone">Puhelinnumero</label><label style="color: #f00000; font-size: 14pt">
+                                                &nbsp;*
+                                            </label>
+                                            <input type="number" id="phone" class="form-control" ng-model='kartoitus.phone' required>
+                                            <br>
+                                            <!--button type="button" class="btn btn-default" href="/form2">
+                                                Jatka <span class="glyphicon glyphicon-chevron-right"</span>
+                                            </button-->
+                                        </div>
+                                    </form>
+                                    <div ng-include src="'/views/control_right.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------- Esitiedot ------------------------------>
+            <div class="item">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                     <h4 class="panel-title">Esitiedot</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form role="form" name='kartoitusForm'>
+                                        <div class="form-group">
+                                            <label for="a1">{{kartoitus.q1}}</label>
+                                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                            <input type="text" id="a1" class="form-control" ng-model='kartoitus.a1' required>
+                                            <label for="a2">{{kartoitus.q2}}</label>
+                                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                            <input type="month" id="a2" class="form-control" ng-model='kartoitus.a2' required>
+                                            <label for="a3">{{kartoitus.q3}}</label>
+                                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                            <input type="number" id="a3" class="form-control" ng-model='kartoitus.a3' required>
+                                            <label for="a4">{{kartoitus.q4}}</label>
+                                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                            <input type="number" id="a4" class="form-control" ng-model='kartoitus.a4' required>
+                                            <label>{{kartoitus.q5}}</label>
+                                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                            <div class="radio">
+                                              <label><input type="radio" name="q5Radios" id="a5_1" value="option1" checked=TRUE>Kyllä</label>
+                                            </div>
+                                            <div class="radio">
+                                              <label><input type="radio" name="q5Radios" id="a5_2" value="option2">Ei</label>
+                                            </div>
+                                            <label>{{kartoitus.q6}}</label>
+                                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                            <div class="radio">
+                                              <label>
+                                                <input type="radio" name="q6Radios" id="a6_1" value="option3" checked=TRUE>Kyllä</label>
+                                            </div>
+                                            <div class="radio">
+                                              <label>
+                                                <input type="radio" name="q6Radios" id="a6_2" value="option4">Ei</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div ng-include src="'/views/controls.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!------------------------------ Tekstinkäsittely- ja tiedonhakutaidot ------------------------------>
+            <div class="item">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                     <h4 class="panel-title">Tekstinkäsittely- ja tiedonhakutaidot</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form role="form" name='kartoitusForm'>
+                                        <div class="form-group">
+                                            <label for="a7">Käytän sujuvasti Wordia</label>
+                                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                            <label style="color: #999"; font-size: 8pt>
+                                                Osaan muotoilla ansioluettelon sekä muita tarpeellisia työnhakuun liittyviä dokumentteja
+                                            </label>
+                                            <input type="text" id="a7" class="form-control" ng-model='kartoitus.a7' required>
+                                            <label for="a8">
+                                                Käytän sujuvasti PowerPointtia 
+                                            </label><label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                            <label style="color: #999"; font-size: 8pt>
+                                                Osaan käyttää PowerPoint-työkalua ja luoda esimerkiksi esittelykalvot itsestäni
+                                            </label>
+                                            <input type="month" id="a8" class="form-control" ng-model='kartoitus.a8' required>
+                                            <label for="a9">
+                                                Käytän sujuvasti Exceliä  
+                                            </label>
+                                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                            <input type="number" id="a9" class="form-control" ng-model='kartoitus.a9' required>
+                                            <label for="a10">
+                                                Minulla on hyvät tiedonhakutaidot
+                                            </label>
+                                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                            <label style="color: #999"; font-size: 8pt>
+                                                Osaan hyödyntää Internetin hakukoneita osana tehokasta tiedonhakua
+                                            </label>
+                                            <input type="number" id="a10" class="form-control" ng-model='kartoitus.a10' required>
+                                        </div>
+                                    </form>
+                                    <div ng-include src="'/views/control_left.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------>
+        </div>
+
+          
+        </div>
+    </div>
+</div>
