@@ -2,18 +2,18 @@ app.controller('FormController',['$scope',function($scope){ //,['$scope','FormFa
     
     $scope.kartoitus = {};
     
-    // Esitiedot 
+    /* Esitiedot 
     $scope.kartoitus.q1 = "Mikä on pohjakoulutuksesi?";
     $scope.kartoitus.q2 = "Valmistumisajankohtasi (kk/vuosi)";
     $scope.kartoitus.q3 = "Kuinka monta työhakemusta olet lähettänyt viimeisen 6 kuukauden aikana?";
     $scope.kartoitus.q4 = "Kuinka monta haastattelukutsua olet saanut viimeisen 6 kuukauden aikana?";
     $scope.kartoitus.q5 = "Oletko ollut töissä viimeisen 12 kk aikana?";
-    $scope.kartoitus.q6 = "Mikäli vastasit edelliseen kysymykseen kyllä, niin vastasiko työ osaamistasi/koulutustasi";
-    
-    // Tekstinkäsittely- ja tiedonhakutaidot
+    $scope.kartoitus.q6 = "Vastasiko työ osaamistasi/koulutustasi?";
     $scope.kartoitus.q7 = "Oletko hakemassa työpaikkaa vai koulutuspaikkaaa?";
     $scope.kartoitus.q8 = "Minkä tyyppinen työ kiinnostaa sinua?";
     $scope.kartoitus.q9 = "Oletko kiinnostunut yrittäjyydestä?";
+    
+    // Tekstinkäsittely- ja tiedonhakutaidot
     $scope.kartoitus.q10 = "";
     $scope.kartoitus.q11 = "";
     $scope.kartoitus.q12 = "";
@@ -25,6 +25,6 @@ app.controller('FormController',['$scope',function($scope){ //,['$scope','FormFa
     $scope.kartoitus.q18 = "";
     $scope.kartoitus.q19 = "";
     $scope.kartoitus.q20 = "";
-    $scope.kartoitus.q21 = "";
+    $scope.kartoitus.q21 = "";*/
 
 }]);

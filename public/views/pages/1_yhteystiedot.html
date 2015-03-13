@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="carousel-caption">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                     <h4 class="panel-title">Yhteystiedot</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form" data-toggle="validator" name='yhteystiedot'>
+                        <div class="form-group">
+                            <label for="name">Etunimi ja sukunimi</label><label style="color: #f00000; font-size: 14pt">
+                                &nbsp;*
+                            </label>
+                            <input type="text" id="name" class="form-control" ng-model='kartoitus.nimi' required>
+                            <label for="number" start="1970">Syntymävuotesi</label><label style="color: #f00000; font-size: 14pt">
+                                &nbsp;*
+                            </label>
+                            <input type="number" id="year" class="form-control" ng-model='kartoitus.vuosi' required>
+                            <label for="email">Sähköpostiosoite</label><label style="color: #f00000; font-size: 14pt">
+                                &nbsp;*
+                            </label>
+                            <input type="email" id="email" class="form-control" ng-model='kartoitus.email' required>
+                            <label for="phone">Puhelinnumero</label><label style="color: #f00000; font-size: 14pt">
+                                &nbsp;*
+                            </label>
+                            <input type="number" id="phone" class="form-control" ng-model='kartoitus.phone' required>
+                            <br>
+                            <button style="float: right;" type="button" class="btn btn-default" href="#">
+                                Lähetä tiedot <span class="glyphicon glyphicon-menu-right"</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <div ng-include src="'/views/control_left.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

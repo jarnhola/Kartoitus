@@ -1,0 +1,187 @@
+<!----------------------------------------------------------------------------------------------------------------
+<
+<    Työnhaun työkalupakki
+<
+<----------------------------------------------------------------------------------------------------------------->
+<div class="container">
+    <div class="carousel-caption">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                     <h4 class="panel-title">Työnhaun työkalupakki</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form" data-toggle="validator" name='kartoitusForm'>
+                        <div class="form-group">
+
+                            <label>
+                                Minulla on työ- ja koulutustodistukset kansioitu
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q38Radios" id="a38_1" ng-model="q38checked" value="todistukset_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q38Radios" id="a38_2" ng-model="q38checked" value="todistukset_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>
+                                Minulla on ajantasainen ja nykyaikainen työhakemus
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q39Radios" id="a39_1" ng-model="q39checked" value="hakemus_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q39Radios" id="a39_2" ng-model="q39checked" value="hakemus_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Minulla on ajantasainen ja nykyaikainen kuvallinen ansioluettelo
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q40Radios" id="a40_1" ng-model="q40checked" value="cv_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q40Radios" id="a40_2" ng-model="q40checked" value="cv_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Ansioluettelo löytyy myös englannin kielisenä
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q41Radios" id="a41_1" ng-model="q41checked" value="englanniksi_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q41Radios" id="a41_2" ng-model="q41checked" value="englanniksi_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Minulla on osaamiskansio (työelämän portfolio)
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q42Radios" id="a42_1" ng-model="q42checked" value="kansio_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q42Radios" id="a42_2" ng-model="q42checked" value="kansio_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Olen lähettänyt/tallentanut hakemukseni suorahakuyrityksiin (=Headhunter)
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q43Radios" id="a43_1" ng-model="q43checked" value="headhunter_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q43Radios" id="a43_2" ng-model="q43checked" value="headhunter_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Olen tallentanut tietoni eri työnvälittäjien sivustolle (esim. Monster tai Työvoimatoimisto)
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q44Radios" id="a44_1" ng-model="q44checked" value="monster_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q44Radios" id="a44_2" ng-model="q44checked" value="monster_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Olen tallentanut tietoni henkilöstöpalveluyrityksen verkkopalveluun
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q45Radios" id="a45_1" ng-model="q45checked" value="henkpalv_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q45Radios" id="a45_2" ng-model="q45checked" value="henkpalv_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Minulla on käyntikortit
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q46Radios" id="a46_1" ng-model="q46checked" value="kortit_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q46Radios" id="a46_2" ng-model="q46checked" value="kortit_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Olen tallentanut työhistoriaani kuvin
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q47Radios" id="a47_1" ng-model="q47checked" value="kuvia_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q47Radios" id="a47_2" ng-model="q47checked" value="kuvia_no">
+                                    Ei
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <div ng-include src="'/views/controls.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+<!----------------------------------------------------------------------------------------------------------------
+<
+<    Sosiaalisen median työkalut
+<
+<----------------------------------------------------------------------------------------------------------------->
+<div class="container">
+    <div class="carousel-caption">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                     <h4 class="panel-title">Sosiaalisen median työkalut</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form" data-toggle="validator" name='kartoitusForm'>
+                        <div class="form-group">
+
+                            <label>Minulla on LinkedIn profiili ja hyödynnän sitä työnhaussa</label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q14Radios" id="a14_1" ng-model="q14checked" value="linkedin_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q14Radios" id="a14_2" ng-model="q14checked" value="linkedin_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Minulla on Facebook-profiili ja hyödynnän sitä työnhaussa
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q15Radios" id="a15_1" ng-model="q15checked" value="facebook_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q15Radios" id="a15_2" ng-model="q15checked" value="facebook_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Minulla on työnhaun kotisivut ja hyödynnän sitä työnhaussa
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q16Radios" id="a16_1" ng-model="q16checked" value="sivut_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q16Radios" id="a16_2" ng-model="q16checked" value="sivut_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Minulla on videoprofiili ja hyödynnän sitä työnhaussa
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q17Radios" id="a17_1" ng-model="q17checked" value="video_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q17Radios" id="a17_2" ng-model="q17checked" value="video_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Kirjoitan blogia saadakseni näkyvyyttä työnhakuni tukena
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q18Radios" id="a18_1" ng-model="q18checked" value="blogi_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q18Radios" id="a18_2" ng-model="q18checked" value="blogi_no">
+                                    Ei
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <div ng-include src="'/views/controls.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

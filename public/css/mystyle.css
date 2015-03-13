@@ -1,9 +1,14 @@
 html {
+    background: transparent url('http://www.opiframe.com/themes/site_themes/default_site/_assets/img/html_bg.jpg');
     position: relative;
     min-height: 100%;
 }
 body {
+    background: transparent url('http://www.opiframe.com/themes/site_themes/default_site/_assets/img/body_bg.png') repeat-x top left;
     margin: 0 0 60px; /* bottom = footer height */
+}
+navbar {
+    box-shadow: 0px 7px 7px -7px #333;
 }
 footer {
     text-align: center;
@@ -13,28 +18,51 @@ footer {
     height: 60px;
     width: 100%;
     background-color: #f5f5f5;
+    /*border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #333;*/
+    box-shadow: 0px -7px 7px -7px #333;
+}
+
+.panel-red {
+  border-color: #ebccd1;
+}
+.panel-red > .panel-heading {
+  color: #fff;
+  background-color: #BD3939;
+  border-color: #BD1919;
+}
+.panel-red > .panel-footer {
+  color: #a94442;
+  background-color: #BD5959;
+  border-color: #BD1919;
+}
+
+/*------------------------- JUMBOTRON ---------------------*/
+.jumbotron {
+    background-color: #ffffff;
+    background-image: url("../images/company_img.png");
+    background-size: cover;
+    border: 1px;
+    border-color: #e0e0e0;
+    border-style: solid;
 }
 .jumbotron p {
   font-size: 14px;
   font-weight: 200;
+  max-width: 700px;
 }
+
+/*-------------------------- CAROUSEL ---------------------*/
 .item .active{
     height: 100%;
     text-align: center;
     background: #fff;
 }
-.carousel-control.left {
-  left: 0;
-  background-image: none;
-}
-.carousel-control.right {
-  right: 0;
-  background-image: none;
-}
 .carousel-caption {
 position: static;
 min-width: 400px;
-width: 50%;
+width: 60%;
 right: 15%;
 bottom: 20px;
 left: 15%;
@@ -46,13 +74,21 @@ text-align: left;
 text-shadow: 0 0 0 rgba(0,0,0,0);
 }
 .carousel-control {
-color: #FF0000;
+color: #ffffff/*#FF0000;*/
 opacity: .5;
 }
 .carousel-control:hover,
 .carousel-control:focus {
-color: #BD1919;
+color: #ffffff /*#BD1919;*/
 opacity: .9;
+}
+.carousel-control.left {
+  left: 0;
+  background-image: none;
+}
+.carousel-control.right {
+  right: 0;
+  background-image: none;
 }
 .controlsBlock {
    	position: relative;
@@ -60,7 +96,7 @@ opacity: .9;
    	left: 0;
    	top: 10px;
    	display: block;
-   	width: 177px;
+   	width: auto; /*177px;*/
    	margin: 0 auto;
    	z-index: 1;
    	height: 24px;
@@ -69,6 +105,7 @@ opacity: .9;
 .controls {
    	position: relative;
    	display: block;
+    width: auto;
 }
 .carousel-indicators {
   	position: relative;
@@ -81,4 +118,14 @@ opacity: .9;
   	margin-left: -30%;
   	text-align: center;
   	list-style: none;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+width: 30px;
+height: 30px;
+margin-top: -15px;
+font-size: 30px;
 }

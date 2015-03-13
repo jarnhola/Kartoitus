@@ -1,0 +1,107 @@
+<!----------------------------------------------------------------------------------------------------------------
+<
+<    Verkostoituminen
+<
+<----------------------------------------------------------------------------------------------------------------->
+<div class="container">
+    <div class="carousel-caption">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                     <h4 class="panel-title">Verkostoituminen</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form" data-toggle="validator" name='kartoitusForm'>
+                        <div class="form-group">
+
+                            <label>
+                                Verkostoidun käymällä seminaareissa
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q44Radios" id="a44_1" ng-model="q44checked" value="seminaarit_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q44Radios" id="a44_2" ng-model="q44checked" value="seminaarit_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>
+                                Verkostoidun käymällä erilaisissa tilaisuuksissa
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q45Radios" id="a45_1" ng-model="q45checked" value="tilaisuudet_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q45Radios" id="a45_2" ng-model="q45checked" value="tilaisuudet_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Tiedän työllisyyttäni edistävät verkostot ja kuulun niihin
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q46Radios" id="a46_1" ng-model="q46checked" value="verkostot_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q46Radios" id="a46_2" ng-model="q46checked" value="verkostot_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Minulla on laaja sähköinen verkosto
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q47Radios" id="a47_1" ng-model="q47checked" value="laaja_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q47Radios" id="a47_2" ng-model="q47checked" value="laaja_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Minulla on useampi suosittelija
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q48Radios" id="a48_1" ng-model="q48checked" value="suosittelijat_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q48Radios" id="a48_2" ng-model="q48checked" value="suosittelijat_no">
+                                    Ei
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <div ng-include src="'/views/controls.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,149 @@
+<!----------------------------------------------------------------------------------------------------------------
+<
+<    Työnhakukuntoni 
+<
+<----------------------------------------------------------------------------------------------------------------->
+<div class="container">
+    <div class="carousel-caption">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                     <h4 class="panel-title">Työnhakukuntoni</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form" data-toggle="validator" name='kartoitusForm'>
+                        <div class="form-group">
+
+                            <label>
+                                Pidän huolta kunnostani harrastamalla säännöllisesti (3-4 krt/vko) liikuntaa
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q32Radios" id="a32_1" ng-model="q32checked" value="harrastan_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q32Radios" id="a32_2" ng-model="q32checked" value="harrastan_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>
+                                Nukun riittävästi (7-9 tuntia yössä)
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q33Radios" id="a33_1" ng-model="q33checked" value="nukun_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q33Radios" id="a33_2" ng-model="q33checked" value="nukun_no">
+                                    Ei
+                                </label>
+                            </div>
+                            
+                            <label>Syön monipuolisesti ja terveellisesti
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q34Radios" id="a34_1" ng-model="q34checked" value="ruoka_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q34Radios" id="a34_2" ng-model="q34checked" value="ruoka_no">
+                                    Ei
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q34Radios" id="a34_3" ng-model="q34hecked"
+                                         value="ammatillinen_idontknow">
+                                    En osaa sanoa
+                                </label>
+                            </div>
+                            
+                            <label>Hoidan henkistä kuntoani pitämällä yllä hyviä ihmissuhteita
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q35Radios" id="a35_1" ng-model="q35checked" value="henkunto_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q35Radios" id="a35_2" ng-model="q35checked" value="henkunto_no">
+                                    Ei
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q35Radios" id="a35_3" ng-model="q35checked" value="henkunto_idontknow">
+                                    En osaa sanoa
+                                </label>
+                            </div>
+                            
+                            <label>Talousasiani on kunnossa työttömyydestä riippumatta
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q36Radios" id="a36_1" ng-model="q36checked" value="talous_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q36Radios" id="a36_2" ng-model="q36checked" value="talous_no">
+                                    Ei
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q36Radios" id="a36_3" ng-model="q36checked" value="talous_idontknow">
+                                    En osaa sanoa
+                                </label>
+                            </div>
+                            
+                            <label>Vakuutusturva (omaisuus- ja henkilövakuutukset) on ajantasalla jos jotain sattuu 
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q37Radios" id="a37_1" ng-model="q37checked" value="vakuutukset_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q37Radios" id="a37_2" ng-model="q37checked" value="vakuutukset_no">
+                                    Ei
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q37Radios" id="a37_3" ng-model="q37checked"
+                                         value="vakuutukset_idontknow">
+                                    En osaa sanoa
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <div ng-include src="'/views/controls.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

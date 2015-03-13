@@ -1,0 +1,157 @@
+<!----------------------------------------------------------------------------------------------------------------
+<
+<    Esitiedot
+<
+<----------------------------------------------------------------------------------------------------------------->
+<div class="container">
+    <div class="carousel-caption">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                     <h4 class="panel-title">Esitiedot</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form" data-toggle="validator" name='esitiedot' action="#">
+                        <div class="form-group">
+                            <label for="a1">
+                                Mikä on pohjakoulutuksesi?
+                            </label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <input type="text" id="a1" class="form-control" ng-model='kartoitus.a1' required>
+
+                            <label for="a2">
+                                Valmistumisajankohtasi (kk/vuosi)
+                            </label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <input type="month" id="a2" class="form-control" ng-model='kartoitus.a2' required>
+
+                            <label for="a3">
+                                Kuinka monta työhakemusta olet lähettänyt viimeisen 6 kuukauden aikana?
+                            </label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <input type="number" id="a3" class="form-control" ng-model='kartoitus.a3' required>
+
+                            <label for="a4">
+                                Kuinka monta haastattelukutsua olet saanut viimeisen 6 kuukauden aikana?
+                            </label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <input type="number" id="a4" class="form-control" ng-model='kartoitus.a4' required>
+
+                            <label>
+                                Oletko ollut töissä viimeisen 12 kk aikana?
+                            </label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <div class="radio">
+                              <label><input type="radio" name="q5Radios" id="a5_1" 
+                                            ng-model="q5checked" value="yes">Kyllä</label>
+                            </div>
+                            <div class="radio">
+                              <label><input type="radio" name="q5Radios" id="a5_2"
+                                            ng-model="q5checked" value="no">Ei</label>
+                            </div>
+                            <div class="check-element" ng-show="q5checked == 'yes'">
+                                <label>
+                                    Vastasiko työ osaamistasi/koulutustasi?
+                                </label>
+                                <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="q6Radios" id="a6_1" value="yes">
+                                        Kyllä
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="q6Radios" id="a6_2" value="no">
+                                        Ei
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="check-element" ng-show="checked == 'no'"></div>
+
+                            <label>
+                                Oletko hakemassa työpaikkaa vai koulutuspaikkaaa?
+                            </label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="q7Radios" id="a7_1" value="option3">
+                                    Työpaikkaa
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="q7Radios" id="a7_2" value="option4">
+                                    Koulutuspaikkaa
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="form-inline">
+                                    <input type="radio" name="q7Radios" id="a7_3" value="option4" ng-model="disable7_3">
+                                    Muuta
+                                    <input type="text" id="a7_other" class="form-control" ng-model='kartoitus.a7'
+                                           ng-disabled="!disable7_3" ng-checked="disable7_3 && 0">
+                                </label>
+                            </div>
+
+                            <label>
+                                Minkä tyyppinen työ kiinnostaa sinua?
+                            </label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="q8_1box" id="a8_1" value="full-time">
+                                    Kokoaikainen työ
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="q8_2box" id="a8_2" value="fixed-term">
+                                    Määräaikainen työ
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="q8_3box" id="a8_3" value="part-time">
+                                  Osa-aikainen työ
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="form-inline">
+                                    <input type="checkbox" name="q8_4box" id="a8_4" 
+                                           value="other" ng-model="disable8_4">Muu työ
+                                    <input type="text" name="q8_4field" id="a8_4_input" class="form-control"
+                                           ng-disabled="!disable8_4" ng-checked="disable8_4 && 0">
+                                </label>
+                            </div>
+
+                            <label>
+                                Oletko kiinnostunut yrittäjyydestä?
+                            </label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q9Radios" id="a9_1" ng-model="q9checked" value="yritys_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q9Radios" id="a9_2" ng-model="q9checked" value="yritys_no">
+                                    Ei
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q9Radios" id="a9_3" ng-model="q9checked" value="yritys_idontknow">
+                                    En osaa sanoa
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="panel-footer">
+                    <div ng-include src="'/views/control_right.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,117 @@
+<!----------------------------------------------------------------------------------------------------------------
+<
+<    Tekstinkäsittely- ja tiedonhakutaidot
+<
+<----------------------------------------------------------------------------------------------------------------->
+<div class="container">
+    <div class="carousel-caption">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                     <h4 class="panel-title">Tekstinkäsittely- ja tiedonhakutaidot</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form" data-toggle="validator" name='kartoitusForm'>
+                        <div class="form-group">
+
+                            <label>Käytän sujuvasti Wordia</label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <p style="color: #999; font-size: 12pt;">Osaan muotoilla ansioluettelon sekä muita tarpeellisia työnhakuun liittyviä dokumentteja
+                            </p>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q10Radios" id="a10_1" ng-model="q10checked" value="word_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q10Radios" id="a10_2" ng-model="q10checked" value="word_no">
+                                    Ei
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q10Radios" id="a10_3" ng-model="q10checked" value="word_idontknow">
+                                    En osaa sanoa
+                                </label>
+                            </div>
+
+                            <label>Käytän sujuvasti PowerPointia</label>
+                            <label style="color: #f00000; font-size: 14pt;">&nbsp;*</label>
+                            <p style="color: #999; font-size: 12pt;">
+                                Osaan käyttää PowerPoint-työkalua ja luoda esimerkiksi esittelykalvot itsestäni
+                            </p>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q11Radios" id="a11_1" ng-model="q11checked" value="powerpoint_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q11Radios" id="a11_2" ng-model="q11checked" value="powerpoint_no">
+                                    Ei
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q11Radios" id="a11_3" ng-model="q11checked" value="powerpoint_idontknow">
+                                    En osaa sanoa
+                                </label>
+                            </div>
+
+                            <label>Käytän sujuvasti Exceliä</label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q12Radios" id="a12_1" ng-model="q12checked" value="excel_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q12Radios" id="a12_2" ng-model="q12checked" value="excel_no">
+                                    Ei
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q12Radios" id="a12_3" ng-model="q12checked" value="excel_idontknow">
+                                    En osaa sanoa
+                                </label>
+                            </div>
+
+                            <label>Minulla on hyvät tiedonhakutaidot</label>
+                            <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
+                            <p style="color: #999; font-size: 12pt;">
+                                Osaan hyödyntää Internetin hakukoneita osana tehokasta tiedonhakua
+                            </p>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q13Radios" id="a13_1" ng-model="q13checked" value="hakukone_yes">
+                                    Kyllä
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q13Radios" id="a13_2" ng-model="q13checked" value="hakukone_no">
+                                    Ei
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="q13Radios" id="a13_3" ng-model="q13checked" value="hakukone_idontknow">
+                                    En osaa sanoa
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <div ng-include src="'/views/controls.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,7 @@ app.config(function($routeProvider,$locationProvider,$httpProvider){
     });
     
     $routeProvider.when('/form',{
-        templateUrl:'views/form.html',
+        templateUrl:'views/carousel.html',
         controller:'FormController'
     });
     
