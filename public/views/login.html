@@ -5,21 +5,21 @@
         <div class='col-md-5'>
             
             <div class="panel-group" id="accordion">
-                <div class="panel panel-info">
+                <div class="panel panel-red">
                     <div class="panel-heading">
                          <h4 class="panel-title">Kirjaudu</h4>
                     </div>
                     <div class="panel-body">
                         <form role="form" name='kartoitusForm'>
                             <div class="form-group">
-                                <label for="name">Käyttäjätunnus</label><label style="color: #f00000; font-size: 14pt">
-                                </label>
-                                <input type="text" id="username" class="form-control" ng-model='login.username' required>
-                                <label for="password">Salasana</label><label style="color: #f00000; font-size: 14pt">
-                                </label>
-                                <input type="password" id="password" class="form-control" ng-model='login.password' required>
+                                
+                                <label for="name">Käyttäjätunnus</label>
+                                <input type="text" id="username" class="form-control" ng-model='admin.username' required>
+                                
+                                <label for="password">Salasana</label>
+                                <input type="password" id="password" class="form-control" ng-model='admin.password' required>
                                 <br>
-                                <button type="button" class="btn btn-danger" ng-click='login()'>Login</button>
+                                <button type="button" class="btn btn-danger" ng-click='admin.login()'>Login</button>
                             </div>
                         </form>
                     </div>

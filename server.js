@@ -1,6 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
+var user = require('./app/user');
+
 var server = express();
 
 //This middleware is called for every request
@@ -12,6 +14,9 @@ server.use(function(req,res,next){
     next();
     
 });
+
+//Here is my middleware
+server.use('/app',user);
 
 //Point static files to public folder
 server.use('/',express.static(__dirname + '/public'));

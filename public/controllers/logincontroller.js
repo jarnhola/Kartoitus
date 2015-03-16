@@ -1,10 +1,11 @@
 app.controller('LoginController',['$scope','$location','$rootScope','LoginFactory','$timeout',function($scope,$location,$rootScope,LoginFactory,$timeout){
 
+    $scope.admin = {};
     //Tätä kutsutaan kun "Kirjaudu"-nappia painetaan
-    $scope.login = function(){
+    $scope.admin.login = function(){
         var loginData = {};
-        loginData.username = $scope.login.username;
-        loginData.password = $scope.login.password;
+        loginData.username = $scope.admin.username;
+        loginData.password = $scope.admin.password;
         
         //Tämä käynnistää kirjautumisen
         LoginFactory.userLogin(loginData);

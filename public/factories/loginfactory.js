@@ -6,17 +6,14 @@ app.factory('LoginFactory',['$resource','$location','$rootScope',function($resou
         var res = $resource('/app/login',{},{post:{method:'POST'}});
         res.post(loginData).$promise.then(function(data){
             console.log('logged in');
-            $location.path('/user');
+            $location.path('/admin');
         });
     }
     /*
     factory.userRegister = function(userData){
         return $resource('/app/register',{},{post:{method:'POST'}}).post(userData).$promise;
     }
-    
-    $rootScope.$on('rootScope:broadcast',function(event,data){
-      factory.loginFailed = true;
-    });*/
+    */
     
     return factory;
 }]);
