@@ -33,9 +33,10 @@ footer {
   border-color: #BD1919;
 }
 .panel-red > .panel-footer {
-  color: #a94442;
+  color: #fff;
   background-color: #BD5959;
   border-color: #BD1919;
+  text-align: center;
 }
 
 /*------------------------- JUMBOTRON ---------------------*/
