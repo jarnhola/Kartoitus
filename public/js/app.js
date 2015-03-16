@@ -14,16 +14,16 @@ app.config(function($routeProvider,$locationProvider,$httpProvider){
     });
     
     $routeProvider.when('/login',{
-        templateUrl:'views/login.html'
+        templateUrl:'views/login.html',
+        controller:'LoginController'
     });
-    /*
+    
     $routeProvider.when('/admin',{
         templateUrl:'views/admin.html',
         controller:'AdminController',
-        resolve:{loginRequired:loginRequired}
+        //resolve:{loginRequired:loginRequired}
     });
-    */
-    
+        
     $routeProvider.otherwise({redirectTo: '/'});
     //$httpProvider.interceptors.push(authenticationFailed);
 });

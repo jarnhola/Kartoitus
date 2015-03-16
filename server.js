@@ -20,6 +20,6 @@ server.use(bodyParser.json());
 server.get('/*',function(req,res){
     
     res.sendFile(__dirname + '/public/index.html');
-});
-*/
+});*/
+
 server.listen(3000);
