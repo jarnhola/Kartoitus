@@ -1,4 +1,24 @@
 <div class="main">
+    <!--nav class="navbar navbar-default" role="navigation">
+      <--div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+                  data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="../images/bottom_logo.png"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+                        
+            <ul class="nav navbar-nav navbar-right">
+
+            </ul>
+        </div>
+      </div>
+    </nav-->
     <div ng-include="'views/navigation.html'"></div>
     
     <div class="container">
@@ -7,7 +27,7 @@
             <div class="panel-group" id="accordion">
                 <div class="panel panel-red">
                     <div class="panel-heading">
-                         <h4 class="panel-title">Kirjaudu</h4>
+                         <h4 class="panel-title">Rekisteröi uusi Admin</h4>
                     </div>
                     <div class="panel-body">
                         <form role="form" name='kartoitusForm'>
@@ -19,14 +39,11 @@
                                 <label for="password">Salasana</label>
                                 <input type="password" id="password" class="form-control" ng-model='user.password' required>
                                 <br>
-                                <span>
-                                    <button type="button" class="btn btn-danger" ng-click='user.login()'>Login</button> 
-                                    <!--button type="button" class="btn btn-default" ng-click='user.register()'>Register</button-->
-                                </span>
+                                <button type="button" class="btn btn-danger" ng-click='user.register()'>
+                                    Rekisteröi
+                                </button>
                             </div>
-                            <p ng-show='error'>{{error}}</p>
-                            <!--p ng-show='user.loginFailed'>Käyttäjänimi tai salasana väärin!</p>
-                            <p class='error' ng-show='user.showError'>Username allready in use. Try another one</p-->
+                            <p ng-show='user.showError'>Nimi on jo käytössä. Kokeile jotakin muuta.</p>
                         </form>
                     </div>
                 </div>
@@ -35,4 +52,3 @@
         </div><!--col-md-5-->
     </div><!--container-->
 </div>
-

@@ -1,0 +1,62 @@
+<div class="main">
+    <!--nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+                  data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="../images/bottom_logo.png"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown" ng-show="location='/admin'">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Valinnat <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Hae nimellä</a></li>
+                        <li><a href="#">Lisää admin</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="" ng-click="user.logout()">Kirjaudu ulos</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav-->
+    <div ng-include="'views/navigation.html'"></div>
+    
+    <div class="container">
+        
+        <h2>Kaikki vastaukset</h2>
+
+        <div>
+            <!--p ng-show='products.length === 0'>There are no products. Please add some product!</p-->
+            <table class='table table-striped'> <!--ng-show='products.length > 0'-->
+                <thread>
+                    <tr class="active">
+                        <th>#</th>
+                        <th>Nimi</th>
+                        <th>Sähköposti</th>
+                        <th>Kirjattu</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <!--check if there are still products left-->
+                    <tr> <!--<tr ng-repeat=''>-->
+                        <td>{{}}</td>
+                        <td>{{}}</td>
+                        <td>{{}}</td>
+                        <td>{{}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><!--container-->
+</div>

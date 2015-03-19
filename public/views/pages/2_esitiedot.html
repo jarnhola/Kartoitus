@@ -43,26 +43,26 @@
                             <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
                             <div class="radio">
                               <label><input type="radio" name="q5Radios" id="a5_1" 
-                                            ng-model="q5checked" value="yes">Kyllä</label>
+                                            ng-model="kartoitus.a5" value="yes">Kyllä</label>
                             </div>
                             <div class="radio">
                               <label><input type="radio" name="q5Radios" id="a5_2"
-                                            ng-model="q5checked" value="no">Ei</label>
+                                            ng-model="kartoitus.a5" value="no">Ei</label>
                             </div>
-                            <div class="check-element" ng-show="q5checked == 'yes'">
+                            <div class="check-element" ng-show="kartoitus.a5 == 'yes'">
                                 <label>
                                     Vastasiko työ osaamistasi/koulutustasi?
                                 </label>
                                 <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="q6Radios" id="a6_1" value="yes">
+                                        <input type="radio" name="q6Radios" id="a6_1" ng-model="kartoitus.a6" value="yes">
                                         Kyllä
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="q6Radios" id="a6_2" value="no">
+                                        <input type="radio" name="q6Radios" id="a6_2" ng-model="kartoitus.a6" value="no">
                                         Ei
                                     </label>
                                 </div>
@@ -70,7 +70,7 @@
                             <div class="check-element" ng-show="checked == 'no'"></div>
 
                             <label>
-                                Oletko hakemassa työpaikkaa vai koulutuspaikkaaa?
+                                Oletko hakemassa työpaikkaa vai koulutuspaikkaa?
                             </label>
                             <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
                             <div class="radio">

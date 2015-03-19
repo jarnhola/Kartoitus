@@ -1,11 +1,35 @@
-var app = angular.module('Kartoitus',['ngRoute','ngResource','ngAnimate']);
+var app = angular.module('Kartoitus',['ngRoute','ngResource','ngAnimate','ngCookies']);
+
+var authenticationFailed = function($q,$rootScope){
+    var responseInterceptor = {
+        response: function(response) {
+            if(response.status === 401){
+                console.log('Authentication failed');
+            }
+            return response;
+        },
+        responseError:function(err){
+            //Login failed....
+            if(err.status === 401){
+                console.log('Login failed');
+                $rootScope.loggedInUser = null;
+                //$location.url('/login');
+            }
+            
+            return err;
+        }
+    }
+    
+    return responseInterceptor;
+}
 
 app.config(function($routeProvider,$locationProvider,$httpProvider){
     
     $locationProvider.html5Mode(true);
-    
+
     $routeProvider.when('/',{
-        templateUrl:'views/main.html'
+        templateUrl:'views/main.html',
+        controller:'LoginController'
     });
     
     $routeProvider.when('/form',{
@@ -18,12 +42,42 @@ app.config(function($routeProvider,$locationProvider,$httpProvider){
         controller:'LoginController'
     });
     
-    $routeProvider.when('/admin',{
-        templateUrl:'views/admin.html',
+    $routeProvider.when('/register',{
+        templateUrl:'views/register.html',
+        controller:'AdminController' //LoginController
+    });
+    
+    $routeProvider.when('/admin_all',{
+        templateUrl:'views/admin_all.html',
         controller:'AdminController',
-        //resolve:{loginRequired:loginRequired}
+        resolve:{loginRequired:loginRequired}
+    });
+    
+    $routeProvider.when('/admin_filter',{
+        templateUrl:'views/admin_filter.html',
+        controller:'AdminController',
+        resolve:{loginRequired:loginRequired}
     });
         
     $routeProvider.otherwise({redirectTo: '/'});
-    //$httpProvider.interceptors.push(authenticationFailed);
+    
+    $httpProvider.interceptors.push(authenticationFailed);    
 });
+
+function loginRequired($q,$location,$resource){
+    
+    var deferred = $q.defer();
+        
+    $resource('/authenticate').get().$promise.then(function(auth){
+        
+        if(auth.authenticated){
+            deferred.resolve();
+        }
+        else{
+            deferred.reject();
+            $location.path('/login');
+        }
+    });
+    
+    return deferred.promise;
+}

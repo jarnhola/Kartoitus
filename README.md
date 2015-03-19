@@ -1,0 +1,1 @@
+Tämä on TyönhakuPRO-valmennuksen osaamiskartoitus. Vastausten perusteella käyttäjälle tullaan ehdottamaan TyönhakuPRO-valmennuksen ryhmää keväälle 2015. TyönhakuPRO-valmennukset järjestetään yhteistyössä Pohjois-Pohjanmaan TE-palvelujen kanssa.

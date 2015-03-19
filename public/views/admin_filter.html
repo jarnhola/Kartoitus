@@ -1,0 +1,31 @@
+<div class="main">
+    <div ng-include="'views/navigation.html'"></div>
+    
+    <div class="container">
+        
+        <h2>Henkilön {$root.username} vastaukset</h2>
+
+        <div>
+            <!--p ng-show='products.length === 0'>There are no products. Please add some product!</p-->
+            <table class='table table-striped'> <!--ng-show='products.length > 0'-->
+                <thread>
+                    <tr class="active">
+                        <th>#</th>
+                        <th>Nimi</th>
+                        <th>Sähköposti</th>
+                        <th>Kirjattu</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <!--check if there are still products left-->
+                    <tr> <!--<tr ng-repeat=''>-->
+                        <td>{{}}</td>
+                        <td>{{}}</td>
+                        <td>{{}}</td>
+                        <td>{{}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><!--container-->
+</div>
