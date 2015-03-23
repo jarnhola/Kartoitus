@@ -30,7 +30,7 @@
                          <h4 class="panel-title">Rekisteröi uusi Admin</h4>
                     </div>
                     <div class="panel-body">
-                        <form role="form" name='kartoitusForm'>
+                        <form role="form" name='kartoitusForm' ng-submit="user.register()">
                             <div class="form-group">
                                 
                                 <label for="name">Käyttäjätunnus</label>
@@ -39,11 +39,9 @@
                                 <label for="password">Salasana</label>
                                 <input type="password" id="password" class="form-control" ng-model='user.password' required>
                                 <br>
-                                <button type="button" class="btn btn-danger" ng-click='user.register()'>
-                                    Rekisteröi
-                                </button>
+                                <input type="submit" class="btn btn-danger" value="Rekisteröi" />
                             </div>
-                            <p ng-show='user.showError'>Nimi on jo käytössä. Kokeile jotakin muuta.</p>
+                            <p ng-show='user.showError'>Tunnus on jo käytössä. Kokeile jotakin muuta.</p>
                         </form>
                     </div>
                 </div>

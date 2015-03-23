@@ -8,11 +8,6 @@ app.factory('LoginFactory',['$resource','$location','$rootScope',function($resou
             $location.path('/admin_all');
         });
     }
-    /*
-    factory.userRegister = function(userData){
-        return $resource('/app/register',{},{post:{method:'POST'}})
-        .post(userData).$promise;
-    }*/
     
     factory.logout = function(){
         $resource('/app/logout').get().$promise.then(function(){

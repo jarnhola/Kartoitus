@@ -10,23 +10,20 @@
                          <h4 class="panel-title">Kirjaudu</h4>
                     </div>
                     <div class="panel-body">
-                        <form role="form" name='kartoitusForm'>
+                        <form role="form" name='kartoitusForm' ng-submit="user.login()">
                             <div class="form-group">
                                 
                                 <label for="name">Käyttäjätunnus</label>
-                                <input type="text" id="username" class="form-control" ng-model='user.username' required>
+                                <input type="text" id="username" class="form-control" ng-model='user.username' required autofocus>
                                 
                                 <label for="password">Salasana</label>
                                 <input type="password" id="password" class="form-control" ng-model='user.password' required>
                                 <br>
                                 <span>
-                                    <button type="button" class="btn btn-danger" ng-click='user.login()'>Login</button> 
-                                    <!--button type="button" class="btn btn-default" ng-click='user.register()'>Register</button-->
+                                    <input type="submit" class="btn btn-danger" value="Login" />
                                 </span>
                             </div>
                             <p ng-show='error'>{{error}}</p>
-                            <!--p ng-show='user.loginFailed'>Käyttäjänimi tai salasana väärin!</p>
-                            <p class='error' ng-show='user.showError'>Username allready in use. Try another one</p-->
                         </form>
                     </div>
                 </div>

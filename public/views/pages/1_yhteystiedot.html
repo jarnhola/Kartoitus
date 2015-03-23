@@ -1,3 +1,8 @@
+<!----------------------------------------------------------------------------------------------------------------
+<
+<    Yhteystiedot
+<
+<----------------------------------------------------------------------------------------------------------------->
 <div class="container">
     <div class="carousel-caption">
         <div class="panel-group" id="accordion">
@@ -6,7 +11,7 @@
                      <h4 class="panel-title">Yhteystiedot ( 9/9 )</h4>
                 </div>
                 <div class="panel-body">
-                    <form role="form" data-toggle="validator" name='yhteystiedot'>
+                    <form role="form" data-toggle="validator" name='kartoitusForm' ng-submit="kartoitus.send()"> <!-- ng-controller="FormController"-->
                         <div class="form-group">
                             <label for="name">Etunimi ja sukunimi</label><label style="color: #f00000; font-size: 14pt">
                                 &nbsp;*
@@ -23,11 +28,9 @@
                             <label for="phone">Puhelinnumero</label><label style="color: #f00000; font-size: 14pt">
                                 &nbsp;*
                             </label>
-                            <input type="number" id="phone" class="form-control" ng-model='kartoitus.phone' required>
+                            <input type="number" id="phone" class="form-control" ng-model='kartoitus.puhelin' required>
                             <br>
-                            <button style="float: right;" type="button" class="btn btn-default" href="#">
-                                Lähetä tiedot <span class="glyphicon glyphicon-menu-right"></span>
-                            </button>
+                            <input type="submit" class="btn btn-danger" value="Lähetä" />
                         </div>
                     </form>
                 </div>
