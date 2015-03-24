@@ -1,6 +1,7 @@
-app.factory('LoginFactory',['$resource','$location','$rootScope',function($resource,$location,$rootScope){
+app.factory('LoginFactory',['$resource','$location','$rootScope','$cookies',function($resource,$location,$rootScope,$cookies){
     
     var factory = {};
+    
     factory.loginFailed = false;
     factory.userLogin = function(loginData){
         var res = $resource('/app/login',{},{post:{method:'POST'}});
@@ -11,7 +12,7 @@ app.factory('LoginFactory',['$resource','$location','$rootScope',function($resou
     
     factory.logout = function(){
         $resource('/app/logout').get().$promise.then(function(){
-            $rootScope.loggedInUser = null;
+            //$rootScope.loggedInUser = null;
             $location.path('/');
         });
     }

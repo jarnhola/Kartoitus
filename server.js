@@ -48,5 +48,9 @@ app.get('/authenticate',function(req,res){
         res.send({authenticated:false});
     }
 });
+app.get('/*',function(req,res){
+    
+    res.sendFile(__dirname + '/public/index.html');
+});
 
 server.listen(3000);

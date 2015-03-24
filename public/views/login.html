@@ -7,7 +7,7 @@
             <div class="panel-group" id="accordion">
                 <div class="panel panel-red">
                     <div class="panel-heading">
-                         <h4 class="panel-title">Kirjaudu</h4>
+                         <h4 class="panel-title">Kirjaudu sisään järjestelmävalvojana</h4>
                     </div>
                     <div class="panel-body">
                         <form role="form" name='kartoitusForm' ng-submit="user.login()">
@@ -20,7 +20,7 @@
                                 <input type="password" id="password" class="form-control" ng-model='user.password' required>
                                 <br>
                                 <span>
-                                    <input type="submit" class="btn btn-danger" value="Login" />
+                                    <input type="submit" class="btn btn-danger" value="Kirjaudu" />
                                 </span>
                             </div>
                             <p ng-show='error'>{{error}}</p>

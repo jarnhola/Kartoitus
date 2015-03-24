@@ -7,5 +7,9 @@ app.factory('AdminFactory',['$resource','$location','$rootScope',function($resou
         .post(userData).$promise;
     }
     
+    factory.getData = function(){ 
+        return $resource('/app/getAll').get().$promise;
+    }
+    
     return factory;
 }]);

@@ -12,7 +12,8 @@ var authenticationFailed = function($q,$rootScope){
             //Login failed....
             if(err.status === 401){
                 console.log('Login failed');
-                $rootScope.loggedInUser = null;
+                //$rootScope.loggedInUser = null;
+                $rootScope.$broadcast('rootScope:broadcast','Authentication Failed');
                 //$location.url('/login');
             }
             

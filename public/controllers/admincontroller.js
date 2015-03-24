@@ -19,4 +19,10 @@ app.controller('AdminController',['$scope','$location','$rootScope','AdminFactor
             }
         });
     }
+    
+    // Haetaan osaamiskartoituksen vastaukset
+    AdminFactory.getData().then(function(data){
+        $scope.vastaukset = data.vastaukset;
+    });
+    
 }]);

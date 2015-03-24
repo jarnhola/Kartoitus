@@ -1,4 +1,4 @@
-app.controller('FormController',['$scope',function($scope){ //,['$scope','FormFactory',function($scope,FormFactory){
+app.controller('FormController',['$scope','$location','FormFactory',function($scope,$location,FormFactory){
     
     $scope.kartoitus = {};
 
@@ -27,7 +27,8 @@ app.controller('FormController',['$scope',function($scope){ //,['$scope','FormFa
     $scope.kartoitus.q19 = "";
     $scope.kartoitus.q20 = "";
     $scope.kartoitus.q21 = "";*/
-    
+
+//- Lähetetään osaamiskartoituksen vastaukset ------------------
     $scope.kartoitus.send = function(){
         
         var kartoitus = {};
@@ -107,7 +108,7 @@ app.controller('FormController',['$scope',function($scope){ //,['$scope','FormFa
         kartoitus.a64 = $scope.kartoitus.a64;
         kartoitus.a65 = $scope.kartoitus.a65;
         kartoitus.a66 = $scope.kartoitus.a66;
-        
+        //-------yhteystiedot----------------
         kartoitus.timestamp = new Date();
         kartoitus.name = $scope.kartoitus.nimi;
         kartoitus.birth = $scope.kartoitus.vuosi;
@@ -115,6 +116,17 @@ app.controller('FormController',['$scope',function($scope){ //,['$scope','FormFa
         kartoitus.phone = $scope.kartoitus.puhelin;
         
         console.log(kartoitus);
+        
+        FormFactory.storeData(kartoitus).then(function(data){
+            
+            if(data.status === 'Error'){
+                $scope.kartoitus.showError = true;
+            }
+            else{
+                $scope.kartoitus.showError = false;
+                $location.path('/');
+            }
+        });
     }
-
+    
 }]);

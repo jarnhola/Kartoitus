@@ -15,7 +15,8 @@
             <!-- Check if we are logged in -->
             <ul class="nav navbar-nav">
                 
-                <li class="dropdown" ng-show="location == '/admin_all' || location == '/admin_filter' || location == '/register'">
+                <!--li class="dropdown" ng-show="location == '/admin_all' || location == '/admin_filter' || location == '/register'"-->
+                <li class="dropdown" ng-show="loggedIn === 'true'">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Valinnat <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/admin_all">Hae kaikki vastaukset</a></li>
@@ -27,8 +28,9 @@
             
             <ul class="nav navbar-nav navbar-right">
                 <!-- Check if we are logged in -->
-                <li ng-show="$root.loggedInUser == null"><a href="" ng-click="nav.login()">Kirjaudu</a></li>
-                <li ng-show="$root.loggedInUser != null"><a href="" ng-click="nav.logout()">Kirjaudu ulos</a></li>
+                <li ng-show="loggedIn !== 'true'"><a href="" ng-click="nav.login()">Kirjaudu</a></li>
+                <!--li ng-show="$root.loggedInUser == null"><a href="" ng-click="nav.register()">Rekisteröi</a></li-->
+                <li ng-show="loggedIn == 'true'"><a href="" ng-click="nav.logout()">Kirjaudu ulos</a></li>
             </ul>
         </div><!--/.nav-collapse -->
       </div>
