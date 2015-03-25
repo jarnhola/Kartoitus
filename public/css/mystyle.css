@@ -40,6 +40,19 @@ footer {
   border-color: #BD1919;
   text-align: center;
 }
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #c9f9c9;
+}
+.table-striped-user-data > tbody > tr:nth-of-type(odd) {
+  background-color: #e9a9a9;
+}
+
+.user-info-list{   
+  display: inline;
+  /*width: 200px;*/
+  float: left;
+  
+}
 
 /*------------------------- JUMBOTRON ---------------------*/
 .jumbotron {

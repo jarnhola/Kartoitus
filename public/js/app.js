@@ -54,6 +54,12 @@ app.config(function($routeProvider,$locationProvider,$httpProvider){
         resolve:{loginRequired:loginRequired}
     });
     
+    $routeProvider.when('/user_data',{
+        templateUrl:'views/user_data.html',
+        controller:'UserDataController',
+        resolve:{loginRequired:loginRequired}
+    });
+    
     $routeProvider.when('/admin_filter',{
         templateUrl:'views/admin_filter.html',
         controller:'AdminController',

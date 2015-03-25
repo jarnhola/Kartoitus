@@ -8,7 +8,15 @@ app.factory('AdminFactory',['$resource','$location','$rootScope',function($resou
     }
     
     factory.getData = function(){ 
-        return $resource('/app/getAll').get().$promise;
+        return $resource('/app/getAllAnswers').get().$promise;
+    }
+    
+    /*factory.getQuestions = function(){ 
+        return $resource('/app/getAllQuestions').get().$promise;
+    }*/
+    
+    factory.getUserData = function(index){ 
+        return $resource('/app/getOneById',{id:index}).get().$promise;
     }
     
     return factory;

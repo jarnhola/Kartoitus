@@ -132,3 +132,25 @@ module.exports.getData = function(req,res){
         }
     });
 }
+
+/*module.exports.getQuestions = function(req,res){
+    
+    var data = {};
+    
+    data.q1 = "joku kysymys";
+    console.log(data);
+    res.send({kysymykset:data});
+}*/
+
+module.exports.getUserData = function(req,res){
+
+    Vastaukset.findOne({_id:req.query.id},function(err,data){
+        
+        if(err){
+            res.send('error');
+        }
+        else{
+            res.send({tiedot:data});
+        }
+    });
+}

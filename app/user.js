@@ -27,10 +27,19 @@ router.post('/store',function(req,res){
     req.queries.storeData(req,res);
 });
 
-router.get('/getAll',function(req,res){
+router.get('/getAllAnswers',function(req,res){
     
     req.queries.getData(req,res);
 });
 
+/*router.get('/getAllQuestions',function(req,res){
+    
+    req.queries.getQuestions(req,res);
+});*/
+
+router.get('/getOneById',function(req,res){
+    
+    req.queries.getUserData(req,res);
+});
 
 module.exports = router;

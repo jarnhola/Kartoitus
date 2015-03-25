@@ -3,6 +3,7 @@ app.factory('LoginFactory',['$resource','$location','$rootScope','$cookies',func
     var factory = {};
     
     factory.loginFailed = false;
+    
     factory.userLogin = function(loginData){
         var res = $resource('/app/login',{},{post:{method:'POST'}});
         res.post(loginData).$promise.then(function(data){
@@ -12,7 +13,6 @@ app.factory('LoginFactory',['$resource','$location','$rootScope','$cookies',func
     
     factory.logout = function(){
         $resource('/app/logout').get().$promise.then(function(){
-            //$rootScope.loggedInUser = null;
             $location.path('/');
         });
     }
