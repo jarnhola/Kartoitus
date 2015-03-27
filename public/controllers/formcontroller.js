@@ -5,52 +5,72 @@ app.controller('FormController',['$scope','$location','FormFactory',function($sc
     // Lähetetään osaamiskartoituksen vastaukset
     $scope.kartoitus.send = function(){
 
-        //Special checking to the question number 8
-        if($scope.kartoitus.a8_1 === undefined && $scope.kartoitus.a8_2 === undefined && 
-           $scope.kartoitus.a8_3 === undefined && $scope.kartoitus.a8_4 === undefined){
-                $scope.kartoitus.a8 = undefined;
-                console.log("a8 undefined");
-        }
-        
-        if($scope.kartoitus.a1 === undefined || $scope.kartoitus.a2 === undefined ||
-           $scope.kartoitus.a3 === undefined || $scope.kartoitus.a4 === undefined ||
-           $scope.kartoitus.a5 === undefined || $scope.kartoitus.a7 === undefined ||
-           $scope.kartoitus.a8 === undefined || $scope.kartoitus.a9 === undefined ||
+        if($scope.kartoitus.a1 === undefined || 
+           $scope.kartoitus.a2 === undefined ||
+           $scope.kartoitus.a3 === undefined || 
+           $scope.kartoitus.a4 === undefined ||
+           $scope.kartoitus.a5 === undefined || 
+           /*$scope.kartoitus.a7 === undefined ||
+           $scope.kartoitus.a8 === undefined ||*/
+           $scope.kartoitus.a9 === undefined ||
            
-           $scope.kartoitus.a10 === undefined || $scope.kartoitus.a11 === undefined ||
-           $scope.kartoitus.a12 === undefined || $scope.kartoitus.a13 === undefined ||
-           $scope.kartoitus.a14 === undefined || $scope.kartoitus.a15 === undefined ||
-           $scope.kartoitus.a16 === undefined || $scope.kartoitus.a17 === undefined ||
+           $scope.kartoitus.a10 === undefined || 
+           $scope.kartoitus.a11 === undefined ||
+           $scope.kartoitus.a12 === undefined || 
+           $scope.kartoitus.a13 === undefined ||
+           $scope.kartoitus.a14 === undefined || 
+           $scope.kartoitus.a15 === undefined ||
+           $scope.kartoitus.a16 === undefined || 
+           $scope.kartoitus.a17 === undefined ||
            $scope.kartoitus.a18 === undefined ||
            
-           $scope.kartoitus.a20 === undefined || $scope.kartoitus.a21 === undefined ||
-           $scope.kartoitus.a22 === undefined || $scope.kartoitus.a23 === undefined ||
-           $scope.kartoitus.a24 === undefined || $scope.kartoitus.a25 === undefined ||
-           $scope.kartoitus.a26 === undefined || $scope.kartoitus.a27 === undefined ||
-           $scope.kartoitus.a28 === undefined || $scope.kartoitus.a29 === undefined ||
+           $scope.kartoitus.a20 === undefined || 
+           $scope.kartoitus.a21 === undefined ||
+           $scope.kartoitus.a22 === undefined || 
+           $scope.kartoitus.a23 === undefined ||
+           $scope.kartoitus.a24 === undefined || 
+           $scope.kartoitus.a25 === undefined ||
+           $scope.kartoitus.a26 === undefined || 
+           $scope.kartoitus.a27 === undefined ||
+           $scope.kartoitus.a28 === undefined || 
+           $scope.kartoitus.a29 === undefined ||
            $scope.kartoitus.a30 === undefined ||
            
-           $scope.kartoitus.a32 === undefined || $scope.kartoitus.a33 === undefined ||
-           $scope.kartoitus.a34 === undefined || $scope.kartoitus.a35 === undefined ||
-           $scope.kartoitus.a36 === undefined || $scope.kartoitus.a37 === undefined ||
+           $scope.kartoitus.a32 === undefined || 
+           $scope.kartoitus.a33 === undefined ||
+           $scope.kartoitus.a34 === undefined || 
+           $scope.kartoitus.a35 === undefined ||
+           $scope.kartoitus.a36 === undefined || 
+           $scope.kartoitus.a37 === undefined ||
            
-           $scope.kartoitus.a38 === undefined || $scope.kartoitus.a39 === undefined ||
-           $scope.kartoitus.a40 === undefined || $scope.kartoitus.a41 === undefined ||
-           $scope.kartoitus.a42 === undefined || $scope.kartoitus.a43 === undefined ||
-           $scope.kartoitus.a44 === undefined || $scope.kartoitus.a45 === undefined ||
-           $scope.kartoitus.a46 === undefined || $scope.kartoitus.a47 === undefined ||
+           $scope.kartoitus.a38 === undefined || 
+           $scope.kartoitus.a39 === undefined ||
+           $scope.kartoitus.a40 === undefined || 
+           $scope.kartoitus.a41 === undefined ||
+           $scope.kartoitus.a42 === undefined || 
+           $scope.kartoitus.a43 === undefined ||
+           $scope.kartoitus.a44 === undefined || 
+           $scope.kartoitus.a45 === undefined ||
+           $scope.kartoitus.a46 === undefined || 
+           $scope.kartoitus.a47 === undefined ||
            
-           $scope.kartoitus.a48 === undefined || $scope.kartoitus.a49 === undefined ||
-           $scope.kartoitus.a50 === undefined || $scope.kartoitus.a51 === undefined ||
+           $scope.kartoitus.a48 === undefined || 
+           $scope.kartoitus.a49 === undefined ||
+           $scope.kartoitus.a50 === undefined || 
+           $scope.kartoitus.a51 === undefined ||
            $scope.kartoitus.a52 === undefined ||
            
-           $scope.kartoitus.a54 === undefined || $scope.kartoitus.a55 === undefined){
+           $scope.kartoitus.a54 === undefined || 
+           $scope.kartoitus.a55 === undefined){
             
                 $scope.kartoitus.showError = true; 
+                console.log($scope.kartoitus);
         }
         else{
+            $scope.kartoitus.showError = false; 
 
             var kartoitus = {};
+            
             //-----------esitiedot---------------
             kartoitus.a1 = $scope.kartoitus.a1;
             kartoitus.a2 = $scope.kartoitus.a2;
@@ -61,8 +81,17 @@ app.controller('FormController',['$scope','$location','FormFactory',function($sc
             kartoitus.a7 = $scope.kartoitus.a7;
             kartoitus.a7_3 = $scope.kartoitus.a7_3;
             kartoitus.a8_1 = $scope.kartoitus.a8_1;
+            console.log(kartoitus.a8_1);
+            if(kartoitus.a8_1 === true){kartoitus.a8_1 = "kokoaikainen";}
+            console.log(kartoitus.a8_1);
             kartoitus.a8_2 = $scope.kartoitus.a8_2;
+            console.log(kartoitus.a8_2);
+            if(kartoitus.a8_2 === true){kartoitus.a8_2 = "määräaikainen";}
+            console.log(kartoitus.a8_2);
             kartoitus.a8_3 = $scope.kartoitus.a8_3;
+            console.log(kartoitus.a8_3);
+            if(kartoitus.a8_3 === true){kartoitus.a8_3 = "osa-aikainen";}
+            console.log(kartoitus.a8_3);
             kartoitus.a8_4 = $scope.kartoitus.a8_4;
             kartoitus.a9 = $scope.kartoitus.a9;
             //-----------taidot-------------------
@@ -139,6 +168,7 @@ app.controller('FormController',['$scope','$location','FormFactory',function($sc
             FormFactory.storeData(kartoitus).then(function(data){
 
                 if(data.status === 'Error'){
+                    console.log("Nyt meni tallennuksessa joku pieleen!!!");
                     $scope.kartoitus.showError = true;
                 }
                 else{

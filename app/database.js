@@ -41,7 +41,9 @@ var vastaukset = new Schema({
     a6:String,
     a7:String,
     a7_3:String,
-    a8:String,
+    a8_1:String,
+    a8_2:String,
+    a8_3:String,
     a8_4:String,
     a9:String,
 //-----------taidot-------------------
@@ -107,7 +109,7 @@ var vastaukset = new Schema({
 //---------yhteystiedot--------------
     name:String,
     birth:Number,
-    email:{type:String,unique:true},
+    email:String,
     phone:String,    
     timestamp:Date
 });

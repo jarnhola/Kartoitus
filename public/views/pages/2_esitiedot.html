@@ -98,24 +98,24 @@
                             </label>
                             <label style="color: #f00000; font-size: 14pt">&nbsp;*</label>
                             <div class="checkbox">
-                                <label><input type="checkbox" name="q8_1box" id="a8_1" value="kokoaikainen" ng-model="kartoitus.a8_1">
+                                <label><input type="checkbox" name="q8_1box" id="a8_1" ng-model="kartoitus.a8_1" value="kokoaikainen">
                                     Kokoaikainen työ
                                 </label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" name="q8_2box" id="a8_2" value="määräaikainen" ng-model="kartoitus.a8_2">
+                                <label><input type="checkbox" name="q8_2box" id="a8_2" ng-model="kartoitus.a8_2" value="määräaikainen">
                                     Määräaikainen työ
                                 </label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" name="q8_3box" id="a8_3" value="osa-aikainen" ng-model="kartoitus.a8_3">
+                                <label><input type="checkbox" name="q8_3box" id="a8_3" ng-model="kartoitus.a8_3" value="osa-aikainen">
                                   Osa-aikainen työ
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label class="form-inline">
                                     <input type="checkbox" name="q8_4box" id="a8_4" 
-                                           value="other" ng-model="disable8_4">Muu työ
+                                           value="muu työ" ng-model="disable8_4">Muu työ
                                     <input type="text" name="q8_4field" id="a8_4_input" class="form-control"
                                            ng-disabled="!disable8_4" ng-checked="disable8_4 && 0" ng-model="kartoitus.a8_4">
                                 </label>

@@ -24,7 +24,14 @@ app.controller('AdminController',['$scope','$location','$rootScope','AdminFactor
      
         AdminFactory.getUserData(index).then(function(data){
             
+            //Special hadling for question 8 check-box choices
+            data.tiedot.a8 = "";
+            if(data.tiedot.a8_1 !== undefined){data.tiedot.a8 = data.tiedot.a8 + " " + data.tiedot.a8_1}
+            if(data.tiedot.a8_2 !== undefined){data.tiedot.a8 = data.tiedot.a8 + " " + data.tiedot.a8_2}
+            if(data.tiedot.a8_3 !== undefined){data.tiedot.a8 = data.tiedot.a8 + " " + data.tiedot.a8_3}
+            
             $rootScope.tiedot = data.tiedot;
+            console.log(data.tiedot);
             $location.path('/user_data');
         });
     }

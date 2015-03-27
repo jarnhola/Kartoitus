@@ -2,9 +2,5 @@ app.controller('UserDataController',['$scope','$location','$rootScope','AdminFac
 
     $scope.tiedot = $rootScope.tiedot;
     
-    /*AdminFactory.getQuestions().then(function(data){
-        $scope.kysymykset = data.kysymykset;
-    });*/
-    
     //console.log($scope.tiedot);
 }]);
