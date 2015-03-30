@@ -1,4 +1,4 @@
-var app = angular.module('Kartoitus',['ngRoute','ngResource','ngAnimate','ngCookies']);
+var app = angular.module('Kartoitus',['ngRoute','ngResource','ngAnimate','ngCookies','ngSanitize','ngCsv']);
 
 var authenticationFailed = function($q,$rootScope){
     var responseInterceptor = {

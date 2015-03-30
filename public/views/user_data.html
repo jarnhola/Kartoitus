@@ -13,6 +13,7 @@
                             <span class="glyphicon glyphicon-heart-empty">&nbsp;{{tiedot.birth}}&nbsp;&nbsp;</span>
                             <span class="glyphicon glyphicon-envelope">&nbsp;{{tiedot.email}}&nbsp;&nbsp;</span>
                             <span class="glyphicon glyphicon-phone">&nbsp;{{tiedot.phone}}</span>
+                            <button type="button" ng-csv="getArray" csv-header="['#', 'Kysymys', 'Vastaus', 'Lisätietoja']" filename="{{tiedot.name}}.csv">Tallenna .scv-tiedostona</button>
                         </td>
                     </tr>
                 </tbody>
