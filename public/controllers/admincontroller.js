@@ -1,4 +1,4 @@
-app.controller('AdminController',['$scope','$location','$rootScope','AdminFactory','$timeout',function($scope,$location,$rootScope,AdminFactory,$timeout){
+app.controller('AdminController',['$scope','$location','$rootScope','AdminFactory',function($scope,$location,$rootScope,AdminFactory){
 
     $scope.user = {};
 

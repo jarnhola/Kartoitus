@@ -1,4 +1,4 @@
-app.controller('LoginController',['$scope','$location','$rootScope','LoginFactory','$timeout','$cookies',function($scope,$location,$rootScope,LoginFactory,$timeout,$cookies){
+app.controller('LoginController',['$scope','$location','$rootScope','LoginFactory','$cookies',function($scope,$location,$rootScope,LoginFactory,$cookies){
     
     $scope.user = {};
     $scope.error = "",
@@ -11,7 +11,7 @@ app.controller('LoginController',['$scope','$location','$rootScope','LoginFactor
         
         if($scope.loggedIn == "true"){
 
-            $scope.error="Olet jo kirjautunut. Kirjaudu ensin ulos ja kirjaudu sitten toisena käyttäjänä";
+            $scope.error="Olet jo kirjautunut! Kirjaudu ensin ulos ja kirjaudu sitten toisena käyttäjänä.";
         }
         else{
             var loginData = {};

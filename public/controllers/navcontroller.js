@@ -5,8 +5,14 @@ app.controller('NavController',['$scope','$location','$cookies','LoginFactory',f
     //Read the loggenin status from $cookies
     $scope.loggedIn = $cookies.loggedIn;
     
-    //if ($scope.loggedIn === 'true') {$scope.loggedOut = '';}
-    //else {$scope.loggedOut = 'true';}
+    if ($scope.loggedIn === true) {
+        $scope.loggedOut = false;
+        $cookies.loggedOut = false;
+    }
+    if ($scope.loggedIn === false){
+        $scope.loggedOut = true;
+        $cookies.loggedOut = true;
+    }
     
     //Read location from the pathname
     $scope.location = window.location.pathname;

@@ -23,7 +23,9 @@
                                     <input type="submit" class="btn btn-danger" value="Kirjaudu" />
                                 </span>
                             </div>
-                            <p ng-show='error'>{{error}}</p>
+                            <div class="alert alert-danger" role="alert" ng-show='error'>
+                                <p>{{error}}</p>
+                            </div>
                         </form>
                     </div>
                 </div>

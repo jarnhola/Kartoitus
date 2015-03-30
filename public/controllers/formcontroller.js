@@ -173,7 +173,7 @@ app.controller('FormController',['$scope','$location','FormFactory',function($sc
                 }
                 else{
                     $scope.kartoitus.showError = false;
-                    $location.path('/');
+                    $location.path('/thanks');
                 }
             });
         }

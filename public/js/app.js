@@ -32,6 +32,10 @@ app.config(function($routeProvider,$locationProvider,$httpProvider){
         templateUrl:'views/main.html',
         controller:'LoginController'
     });
+        
+    $routeProvider.when('/thanks',{
+        templateUrl:'views/thanks.html',
+    });
     
     $routeProvider.when('/form',{
         templateUrl:'views/carousel.html',
