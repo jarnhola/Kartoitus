@@ -19,8 +19,8 @@ app.controller('NavController',['$scope','$location','$cookies','LoginFactory',f
     
     //Logout function
     $scope.nav.logout = function(){
-        $scope.loggedIn = '';
-        $cookies.loggedIn = '';
+        $scope.loggedIn = false;
+        $cookies.loggedIn = false;
         LoginFactory.logout();
     }
     //Login function

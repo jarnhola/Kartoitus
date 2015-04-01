@@ -9,7 +9,7 @@ app.controller('LoginController',['$scope','$location','$rootScope','LoginFactor
     //Tätä kutsutaan kun "Kirjaudu"-nappia painetaan
     $scope.user.login = function(){
         
-        if($scope.loggedIn == "true"){
+        if($scope.loggedIn === true){
 
             $scope.error="Olet jo kirjautunut! Kirjaudu ensin ulos ja kirjaudu sitten toisena käyttäjänä.";
         }
@@ -20,7 +20,7 @@ app.controller('LoginController',['$scope','$location','$rootScope','LoginFactor
             
             //Tämä käynnistää kirjautumisen
             LoginFactory.userLogin(loginData);
-            $cookies.loggedIn = 'true';
+            $cookies.loggedIn = true;
         }
             
     }

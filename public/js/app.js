@@ -75,7 +75,7 @@ app.config(function($routeProvider,$locationProvider,$httpProvider){
     $httpProvider.interceptors.push(authenticationFailed);    
 });
 
-function loginRequired($q,$location,$resource){
+function loginRequired($q,$location,$resource,$cookies){
     
     var deferred = $q.defer();
         
@@ -85,6 +85,7 @@ function loginRequired($q,$location,$resource){
             deferred.resolve();
         }
         else{
+            $cookies.loggedIn = false;
             deferred.reject();
             $location.path('/login');
         }

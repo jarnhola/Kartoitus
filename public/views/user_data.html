@@ -13,7 +13,7 @@
                             <span class="glyphicon glyphicon-heart-empty">&nbsp;{{tiedot.birth}}&nbsp;&nbsp;</span>
                             <span class="glyphicon glyphicon-envelope">&nbsp;{{tiedot.email}}&nbsp;&nbsp;</span>
                             <span class="glyphicon glyphicon-phone">&nbsp;{{tiedot.phone}}</span>
-                            <button type="button" ng-csv="getArray" csv-header="['#', 'Kysymys', 'Vastaus', 'Lisätietoja']" filename="{{tiedot.name}}.csv">Tallenna .scv-tiedostona</button>
+                            &nbsp;&nbsp;<button type="button" ng-csv="getArray" csv-header="['#', 'Kysymys', 'Vastaus', 'Lisätietoja']" filename="{{tiedot.name}}.csv" field-separator=";" add-bom="true">Tallenna .scv-tiedostona</button>
                         </td>
                     </tr>
                 </tbody>
@@ -30,385 +30,385 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Mikä on pohjakoulutuksesi?</td>
+                        <td>{{tiedot.q1}}</td>
                         <td>{{tiedot.a1}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Valmistumisajankohtasi (kk/vuosi):</td>
+                        <td>{{tiedot.q2}}</td>
                         <td>{{tiedot.a2 | date:'MM/yyyy'}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Kuinka monta työhakemusta olet lähettänyt viimeisen 6 kuukauden aikana?</td>
+                        <td>{{tiedot.q3}}</td>
                         <td>{{tiedot.a3}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Kuinka monta haastattelukutsua olet saanut viimeisen 6 kuukauden aikana?</td>
+                        <td>{{tiedot.q4}}</td>
                         <td>{{tiedot.a4}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Oletko ollut töissä viimeisen 12 kk aikana?</td>
+                        <td>{{tiedot.q5}}</td>
                         <td>{{tiedot.a5}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>6</td>
-                        <td>Vastasiko työ osaamistasi/koulutustasi?</td>
+                        <td>{{tiedot.q6}}</td>
                         <td>{{tiedot.a6}}</td
                         <td></td>
                     </tr>
                     <tr>
                         <td>7</td>
-                        <td>Oletko hakemassa työpaikkaa vai koulutuspaikkaa?</td>
+                        <td>{{tiedot.q7}}</td>
                         <td>{{tiedot.a7}}</td>
                         <td>{{tiedot.a7_3}}</td>
                     </tr>
                     <tr>
                         <td>8</td>
-                        <td>Minkä tyyppinen työ kiinnostaa sinua?</td>
+                        <td>{{tiedot.q8}}</td>
                         <td>{{tiedot.a8}}</td>
                         <td>{{tiedot.a8_4}}</td>
                     </tr>
                     <tr>
                         <td>9</td>
-                        <td>Oletko kiinnostunut yrittäjyydestä?</td>
+                        <td>{{tiedot.q9}}</td>
                         <td>{{tiedot.a9}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>10</td>
-                        <td>Käytän sujuvasti Wordia</td>
+                        <td>{{tiedot.q10}}</td>
                         <td>{{tiedot.a10}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>11</td>
-                        <td>Käytän sujuvasti PowerPointia</td>
+                        <td>{{tiedot.q11}}</td>
                         <td>{{tiedot.a11}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>12</td>
-                        <td>Käytän sujuvasti Exceliä</td>
+                        <td>{{tiedot.q12}}</td>
                         <td>{{tiedot.a12}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>13</td>
-                        <td>Minulla on hyvät tiedonhakutaidot</td>
+                        <td>{{tiedot.q13}}</td>
                         <td>{{tiedot.a13}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>14</td>
-                        <td>Minulla on LinkedIn profiili ja hyödynnän sitä työnhaussa</td>
+                        <td>{{tiedot.q14}}</td>
                         <td>{{tiedot.a14}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>15</td>
-                        <td>Minulla on Facebook-profiili ja hyödynnän sitä työnhaussa</td>
+                        <td>{{tiedot.q15}}</td>
                         <td>{{tiedot.a15}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>16</td>
-                        <td>Minulla on työnhaun kotisivut ja hyödynnän sitä työnhaussa</td>
+                        <td>{{tiedot.q16}}</td>
                         <td>{{tiedot.a16}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>17</td>
-                        <td>Minulla on videoprofiili ja hyödynnän sitä työnhaussa</td>
+                        <td>{{tiedot.q17}}</td>
                         <td>{{tiedot.a17}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>18</td>
-                        <td>Kirjoitan blogia saadakseni näkyvyyttä työnhakuni tukena</td>
+                        <td>{{tiedot.q18}}</td>
                         <td>{{tiedot.a18}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>19</td>
-                        <td>Tiedän, mitkä ovat vahvuuteni työnteossa</td>
+                        <td>{{tiedot.q20}}</td>
                         <td>{{tiedot.a20}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>20</td>
-                        <td>Tiedän, mitä kehittämiskohteita minulla on ammatillisessa mielessä</td>
+                        <td>{{tiedot.q21}}</td>
                         <td>{{tiedot.a21}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>21</td>
-                        <td>Minulla on vahva ammatillinen itsetunto</td>
+                        <td>{{tiedot.q22}}</td>
                         <td>{{tiedot.a22}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>22</td>
-                        <td>Kehitän ammattitaitoani jatkuvasti opiskelemalla</td>
+                        <td>{{tiedot.q23}}</td>
                         <td>{{tiedot.a23}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>23</td>
-                        <td>Minulla on hyvä itsetunto</td>
+                        <td>{{tiedot.q24}}</td>
                         <td>{{tiedot.a24}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>24</td>
-                        <td>Minulla on selkeä minäkuva</td>
+                        <td>{{tiedot.q25}}</td>
                         <td>{{tiedot.a25}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>25</td>
-                        <td>Omaan hyvät ihmissuhdetaidot</td>
+                        <td>{{tiedot.q26}}</td>
                         <td>{{tiedot.a26}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>26</td>
-                        <td>Olen tehnyt itsetuntemukseni lisäämiseksi erityyppisiä testejä</td>
+                        <td>{{tiedot.q27}}</td>
                         <td>{{tiedot.a27}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>27</td>
-                        <td>Minut on palkittu usein työsuorituksistani</td>
+                        <td>{{tiedot.q28}}</td>
                         <td>{{tiedot.a28}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>28</td>
-                        <td>Urani on ollut nousujohteinen, tehtävänimikkeet kertovat siitä</td>
+                        <td>{{tiedot.q29}}</td>
                         <td>{{tiedot.a29}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>29</td>
-                        <td>Tiedän, mitkä asiat minua motivoi työnteossa</td>
+                        <td>{{tiedot.q30}}</td>
                         <td>{{tiedot.a30}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>30</td>
-                        <td>Pidän huolta kunnostani harrastamalla säännöllisesti (3-4 krt/vko) liikuntaa</td>
+                        <td>{{tiedot.q32}}</td>
                         <td>{{tiedot.a32}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>31</td>
-                        <td>Nukun riittävästi (7-9 tuntia yössä)</td>
+                        <td>{{tiedot.q33}}</td>
                         <td>{{tiedot.a33}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>32</td>
-                        <td>Syön monipuolisesti ja terveellisesti</td>
+                        <td>{{tiedot.q34}}</td>
                         <td>{{tiedot.a34}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>33</td>
-                        <td>Hoidan henkistä kuntoani pitämällä yllä hyviä ihmissuhteita</td>
+                        <td>{{tiedot.q35}}</td>
                         <td>{{tiedot.a35}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>34</td>
-                        <td>Talousasiani on kunnossa työttömyydestä riippumatta</td>
+                        <td>{{tiedot.q36}}</td>
                         <td>{{tiedot.a36}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>35</td>
-                        <td>Vakuutusturva (omaisuus- ja henkilövakuutukset) on ajantasalla jos jotain sattuu </td>
+                        <td>{{tiedot.q37}}</td>
                         <td>{{tiedot.a37}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>36</td>
-                        <td>Minulla on työ- ja koulutustodistukset kansioitu</td>
+                        <td>{{tiedot.q38}}</td>
                         <td>{{tiedot.a38}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>37</td>
-                        <td>Minulla on ajantasainen ja nykyaikainen työhakemus</td>
+                        <td>{{tiedot.q39}}</td>
                         <td>{{tiedot.a39}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>38</td>
-                        <td>Minulla on ajantasainen ja nykyaikainen kuvallinen ansioluettelo</td>
+                        <td>{{tiedot.q40}}</td>
                         <td>{{tiedot.a40}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>39</td>
-                        <td>Ansioluettelo löytyy myös englannin kielisenä</td>
+                        <td>{{tiedot.q41}}</td>
                         <td>{{tiedot.a41}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>40</td>
-                        <td>Minulla on osaamiskansio (työelämän portfolio)</td>
+                        <td>{{tiedot.q42}}</td>
                         <td>{{tiedot.a42}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>41</td>
-                        <td>Olen lähettänyt/tallentanut hakemukseni suorahakuyrityksiin (=Headhunter)</td>
+                        <td>{{tiedot.q43}}</td>
                         <td>{{tiedot.a43}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>42</td>
-                        <td>Olen tallentanut tietoni eri työnvälittäjien sivustolle (esim. Monster tai Työvoimatoimisto)</td>
+                        <td>{{tiedot.q44}}</td>
                         <td>{{tiedot.a44}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>43</td>
-                        <td>Olen tallentanut tietoni henkilöstöpalveluyrityksen verkkopalveluun</td>
+                        <td>{{tiedot.q45}}</td>
                         <td>{{tiedot.a45}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>44</td>
-                        <td>Minulla on käyntikortit</td>
+                        <td>{{tiedot.q46}}</td>
                         <td>{{tiedot.a46}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>45</td>
-                        <td>Olen tallentanut työhistoriaani kuvin</td>
+                        <td>{{tiedot.q47}}</td>
                         <td>{{tiedot.a47}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>46</td>
-                        <td>Verkostoidun käymällä seminaareissa</td>
+                        <td>{{tiedot.q48}}</td>
                         <td>{{tiedot.a48}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>47</td>
-                        <td>Verkostoidun käymällä erilaisissa tilaisuuksissa</td>
+                        <td>{{tiedot.q49}}</td>
                         <td>{{tiedot.a49}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>48</td>
-                        <td>Tiedän työllisyyttäni edistävät verkostot ja kuulun niihin</td>
+                        <td>{{tiedot.q50}}</td>
                         <td>{{tiedot.a50}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>49</td>
-                        <td>Minulla on laaja sähköinen verkosto</td>
+                        <td>{{tiedot.q51}}</td>
                         <td>{{tiedot.a51}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>50</td>
-                        <td>Minulla on useampi suosittelija</td>
+                        <td>{{tiedot.q52}}</td>
                         <td>{{tiedot.a52}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>51</td>
-                        <td>Olen aktiivinen työnhakija</td>
+                        <td>{{tiedot.q53}}</td>
                         <td>{{tiedot.a53}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>52</td>
-                        <td>Olen passiivinen työnhakija</td>
+                        <td>{{tiedot.q54}}</td>
                         <td>{{tiedot.a54}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>53</td>
-                        <td>Minulla on työnhakuun liittyvä suunnitelma</td>
+                        <td>{{tiedot.q55}}</td>
                         <td>{{tiedot.a55}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>54</td>
-                        <td>Olen asettanut itselleni tavoitteet työnhakuun liittyen</td>
+                        <td>{{tiedot.q56}}</td>
                         <td>{{tiedot.a56}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>55</td>
-                        <td>Olen asettanut aikataulun työnhakuun liittyen</td>
+                        <td>{{tiedot.q57}}</td>
                         <td>{{tiedot.a57}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>56</td>
-                        <td>Työnhakuni on erittäin suunnitelmallista</td>
+                        <td>{{tiedot.q58}}</td>
                         <td>{{tiedot.a58}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>57</td>
-                        <td>Työnhakuni on erittäin systemaattista</td>
+                        <td>{{tiedot.q59}}</td>
                         <td>{{tiedot.a59}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>58</td>
-                        <td>Suhtaudun työnhakuun kurinalaisesti</td>
+                        <td>{{tiedot.q60}}</td>
                         <td>{{tiedot.a60}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>59</td>
-                        <td>Seuraan työnhakuun liittyviä tuloksia kirjaamalla ne ylös</td>
+                        <td>{{tiedot.q61}}</td>
                         <td>{{tiedot.a61}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>60</td>
-                        <td>Minulla on koottuna työnantajarekisteri</td>
+                        <td>{{tiedot.q62}}</td>
                         <td>{{tiedot.a62}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>61</td>
-                        <td>Soitan useamman kerran viikossa työnantajille</td>
+                        <td>{{tiedot.q63}}</td>
                         <td>{{tiedot.a63}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>62</td>
-                        <td>Ennen haastatteluun menoa, valmistaudun perusteellisesti</td>
+                        <td>{{tiedot.q64}}</td>
                         <td>{{tiedot.a64}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>63</td>
-                        <td>Teen aina avoimeen tehtävään räätälöidyn ansioluettelon</td>
+                        <td>{{tiedot.q65}}</td>
                         <td>{{tiedot.a65}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>64</td>
-                        <td>Pääsääntöisesti haen töitä TE-palvelujen sivujen kautta (www.te-palvelut.fi)</td>
+                        <td>{{tiedot.q66}}</td>
                         <td>{{tiedot.a66}}</td>
                     </tr>
                 </tbody>

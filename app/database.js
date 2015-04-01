@@ -1,7 +1,13 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 
-mongoose.connect('mongodb://localhost/kartoitus',function(err,success){
+var uri = "mongodb://localhost/kartoitus";
+
+if(process.env.OPENSHIFT_MONGODB_DB_URL){
+    uri = process.env.OPENSHIFT_MONGODB_DB_URL + "kartoitus";
+}
+
+mongoose.connect(uri,function(err,success){
     
     if(err){
         console.log(err + " check that your mongodb is running.");
