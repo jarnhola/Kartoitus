@@ -31,8 +31,10 @@
                             <input type="text" id="phone" class="form-control" ng-model='kartoitus.puhelin' required>
                             <br>
                             <input type="submit" class="btn btn-danger" value="Lähetä" />
-                            <br>
-                            <p ng-show='kartoitus.showError'>Täytä kaikki pakolliset kentät!.</p>
+                            <br><br>
+                            <div class="alert alert-danger" role="alert" ng-show='kartoitus.showError'>
+                                <p>Täytä kaikki pakolliset(*) kentät!</p>
+                            </div>
                         </div>
                     </form>
                 </div>

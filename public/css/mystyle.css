@@ -47,6 +47,10 @@ footer {
   background-color: #e9a9a9;
 }
 
+.table-mouse-over > tbody > tr:hover {
+  background-color: #e9a9a9;
+}
+
 .user-info-list{   
   display: inline;
   /*width: 200px;*/

@@ -7,7 +7,7 @@
 
         <div ng-init="getData()">
             <!--p ng-show='products.length === 0'>There are no products. Please add some product!</p-->
-            <table class='table table-hover table-striped '> <!--ng-show='products.length > 0'-->
+            <table class='table table-mouse-over table-striped'> <!--ng-show='products.length > 0'-->
                 <thread>
                     <tr class="active">
                         <th>#</th>
@@ -20,7 +20,7 @@
                     <!--check if there are still products left-->
                     <tr ng-repeat='person in lista' ng-click="getUserData(person._id)">
                         <td>{{$index+1}}</td>
-                        <td><a href="">{{person.name}}</a></td>
+                        <td>{{person.name}}</td>
                         <td>{{person.email}}</td>
                         <td>{{person.timestamp | date:'dd.MM.yyyy'}}</td>
                     </tr>
