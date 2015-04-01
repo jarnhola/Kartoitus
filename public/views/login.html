@@ -26,6 +26,9 @@
                             <div class="alert alert-danger" role="alert" ng-show='error'>
                                 <p>{{error}}</p>
                             </div>
+                            <div class="alert alert-danger" role="alert" ng-show='user.loginFailed'>
+                                <p>Käyttäjänimi tai salasana väärin!</p>
+                            </div>
                         </form>
                     </div>
                 </div>
